@@ -53,6 +53,12 @@ Source: http://www.unsplash.com
 
 == Changelog ==
 
+Version 1.43 (2018-10-05)
+-------------------------
+- Added Gutenberg support
+- Improved support for < PHP 5.5
+- Escaping of variables
+
 Version 1.42 (2018-05-24)
 -------------------------
 - Fixed search field icon size

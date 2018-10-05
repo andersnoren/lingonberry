@@ -58,15 +58,10 @@ body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3,
 }
 
 body#tinymce.wp-editor h1 { font-size: 2em; }
-
 body#tinymce.wp-editor h2 { font-size: 1.75em; }
-
 body#tinymce.wp-editor h3 { font-size: 1.5em; }
-
 body#tinymce.wp-editor h4 { font-size: 1.25em; }
-
 body#tinymce.wp-editor h5 { font-size: 1.1em; }
-
 body#tinymce.wp-editor h6 {
 	font-size: 0.925em;
 	font-weight: bold;

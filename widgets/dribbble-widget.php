@@ -52,11 +52,11 @@ class lingonberry_dribbble_widget extends WP_Widget {
 						preg_match("/src=\"(http.*(jpg|jpeg|gif|png))/", $description, $image_url);
 						$image = $image_url[1]; ?>
 																												
-							<a href="<?php echo $link; ?>" title="<?php echo $title;?>" class="dribbble-shot"><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></a> 
+							<a href="<?php echo esc_url( $link ); ?>" title="<?php echo esc_attr( $title );?>" class="dribbble-shot"><img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $title );?>"/></a> 
 																																			 	
 					<?php endforeach; ?>
 					
-					<p class="widgetmore"><a href="http://www.dribbble.com/<?php echo $dribbble_user; ?>"><?php printf( __( 'Follow %s on Dribbble &raquo;', 'lingonberry' ), $dribbble_username); ?></a></p>
+					<p class="widgetmore"><a href="http://www.dribbble.com/<?php echo esc_url( $dribbble_user ); ?>"><?php printf( __( 'Follow %s on Dribbble &raquo;', 'lingonberry' ), $dribbble_username); ?></a></p>
 				
 				</div>
 							
