@@ -53,6 +53,11 @@ Source: http://www.unsplash.com
 
 == Changelog ==
 
+Version 1.42 (2018-05-24)
+-------------------------
+- Fixed search field icon size
+- Fixed output of comments cookie checkbox
+
 Version 1.41 (2017-12-03)
 -------------------------
 - The pluggable update: Made all functions in functions.php pluggable
