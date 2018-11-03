@@ -53,6 +53,10 @@ Source: http://www.unsplash.com
 
 == Changelog ==
 
+Version 1.44 (2018-11-03)
+-------------------------
+- Fixed the archive template date formatting
+
 Version 1.43 (2018-10-05)
 -------------------------
 - Added Gutenberg support

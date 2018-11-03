@@ -41,7 +41,7 @@ get_header(); ?>
 
 						            foreach( $archive_30 as $post ) : ?>
 						                <li>
-						                	<a href="<?php echo get_permalink( $post->ID ); ?>"><?php echo get_the_title( $post->ID );?> <span>(<?php the_time( get_option( 'date_format' ), $post->ID ); ?>)</span>
+						                	<a href="<?php echo get_permalink( $post->ID ); ?>"><?php echo get_the_title( $post->ID );?> <span>(<?php echo get_the_time( get_option( 'date_format' ), $post->ID ); ?>)</span>
 						                	</a>
 						                </li>
 						            <?php endforeach; ?>
