@@ -663,13 +663,13 @@ if ( ! function_exists( 'lingonberry_add_gutenberg_features' ) ) :
 			array(
 				'name' 		=> _x( 'Large', 'Name of the large font size in Gutenberg', 'lingonberry' ),
 				'shortName' => _x( 'L', 'Short name of the large font size in the Gutenberg editor.', 'lingonberry' ),
-				'size' 		=> 24,
+				'size' 		=> 23,
 				'slug' 		=> 'large',
 			),
 			array(
 				'name' 		=> _x( 'Larger', 'Name of the larger font size in Gutenberg', 'lingonberry' ),
 				'shortName' => _x( 'XL', 'Short name of the larger font size in the Gutenberg editor.', 'lingonberry' ),
-				'size' 		=> 32,
+				'size' 		=> 30,
 				'slug' 		=> 'larger',
 			),
 		) );
