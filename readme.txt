@@ -53,6 +53,10 @@ Source: http://www.unsplash.com
 
 == Changelog ==
 
+Version 1.47 (2019-04-07)
+-------------------------
+- Added the new wp_body_open() function, along with a function_exists check
+
 Version 1.46 (2018-12-07)
 -------------------------
 - Fixed Gutenberg style changes required due to changes in the block editor CSS and classes
