@@ -50,13 +50,11 @@ if ( have_comments() ) : ?>
 		
 			<div class="comment-nav-below post-nav" role="navigation">
 			
-				<h3 class="assistive-text section-heading"><?php _e( 'Comment Navigation', 'lingonberry' ); ?></h3>
+				<h3 class="section-heading"><?php _e( 'Comment Navigation', 'lingonberry' ); ?></h3>
 				
 				<div class="post-nav-older"><?php previous_comments_link( '&laquo; ' . __('Older','lingonberry') . '<span> ' . __('Comments', 'lingonberry') . '</span>'); ?></div>
 				
 				<div class="post-nav-newer"><?php next_comments_link( __('Newer','lingonberry') . '<span> ' . __('Comments', 'lingonberry') . '</span>  &raquo;' ); ?></div>
-				
-				<div class="clear"></div>
 				
 			</div><!-- .comment-nav-below -->
 			
@@ -67,12 +65,4 @@ if ( have_comments() ) : ?>
 	<?php 
 endif;
 
-if ( ! comments_open() && !is_page() ) : ?>
-
-	<p class="nocomments"><?php _e( 'Comments are closed.', 'lingonberry' ); ?></p>
-	
-<?php endif;
-
 comment_form();
-
-?>

@@ -2,45 +2,23 @@
 
 	<div class="footer section">
 		
-		<div class="footer-inner section-inner">
-		
-			<?php if ( is_active_sidebar( 'footer-a' ) ) : ?>
-			
-				<div class="footer-a widgets">
-			
-					<?php dynamic_sidebar( 'footer-a' ); ?>
-					
-					<div class="clear"></div>
-					
-				</div><!-- .footer-a -->
-				
-			<?php endif; ?>
-				
-			<?php if ( is_active_sidebar( 'footer-b' ) ) : ?>
-			
-				<div class="footer-b widgets">
-			
-					<?php dynamic_sidebar( 'footer-b' ); ?>
-					
-					<div class="clear"></div>
-					
-				</div><!-- .footer-b -->
-							
-			<?php endif; ?>
-								
-			<?php if ( is_active_sidebar( 'footer-c' ) ) : ?>
-			
-				<div class="footer-c widgets">
-			
-					<?php dynamic_sidebar( 'footer-c' ); ?>
-					
-					<div class="clear"></div>
-					
-				</div><!-- .footer-c -->
-				
-			<?php endif; ?>
-			
-			<div class="clear"></div>
+		<div class="footer-inner section-inner group">
+
+			<?php
+
+			$widget_areas = array( 'footer-a', 'footer-b', 'footer-c' );
+
+			foreach ( $widget_areas as $widget_area ) :
+				if ( ! is_active_sidebar( $widget_area ) ) continue;
+				?>
+
+				<div class="<?php echo esc_attr( $widget_area ); ?> widgets">
+					<?php dynamic_sidebar( $widget_area ); ?>
+				</div><!-- .widgets -->
+
+				<?php
+			endforeach;
+			?>
 		
 		</div><!-- .footer-inner -->
 	

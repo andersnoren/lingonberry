@@ -18,6 +18,8 @@
 			wp_body_open(); 
 		}
 		?>
+
+		<a class="skip-link button" href="#site-content"><?php esc_html_e( 'Skip to the content', 'lingonberry' ); ?></a>
 	
 		<div class="navigation">
 				
@@ -31,7 +33,6 @@
 							'container'			=> '', 
 							'items_wrap' 		=> '%3$s',
 							'theme_location' 	=> 'primary', 
-							'walker' 			=> new lingonberry_nav_walker,
 						) ); 
 					
 					} else {
@@ -55,7 +56,13 @@
 	
 		<div class="header section">
 				
-			<div class="header-inner section-inner">
+			<div class="header-inner section-inner group">
+
+				<button class="nav-toggle">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</button>
 			
 				<?php if ( get_header_image() != '' ) : ?>
 							
@@ -72,16 +79,6 @@
 				<h1 class="blog-title">
 					<a href="<?php echo esc_url( home_url() ); ?>/" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a>
 				</h1>
-				
-				<div class="nav-toggle">
-				
-					<div class="bar"></div>
-					<div class="bar"></div>
-					<div class="bar"></div>
-				
-				</div>
-				 				
-				 <div class="clear"></div>
 																							
 			</div><!-- .header section -->
 			

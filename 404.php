@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 
-<div class="content section-inner">
+<main id="site-content" class="content section-inner">
 
 	<div class="posts">
 
-		<div class="post">
+		<article class="post">
 		
 			<div class="content-inner">
 	                
-				<div class="post-header">
+				<header class="post-header">
 				        
 		        	<h2 class="post-title"><?php _e( 'Error 404', 'lingonberry' ); ?></h2>
 		        	
-		        </div>
+		        </header>
 			                                                	            
 		        <div class="post-content">
 		        	            
@@ -24,10 +24,10 @@
 	        
 	        </div><!-- .content-inner -->
 	            	                        	
-		</div><!-- .post -->
+		</article><!-- .post -->
 	
 	</div><!-- .posts -->
 
-</div><!-- .content -->
+</main><!-- #site-content -->
 
 <?php get_footer(); ?>

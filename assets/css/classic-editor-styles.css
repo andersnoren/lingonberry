@@ -24,12 +24,12 @@ body#tinymce.wp-editor * {
 body#tinymce.wp-editor p { line-height: 150%; }
 
 body#tinymce.wp-editor a { 
-	color: #FF706C; 
+	color: #ff706c; 
 	text-decoration: none;
 }
 
 body#tinymce.wp-editor a:hover { 
-	color: #FF706C; 
+	color: #ff706c; 
 	text-decoration: underline;
 }
 
@@ -41,7 +41,7 @@ body#tinymce.wp-editor img {
 body#tinymce.wp-editor hr {
 	width: 50%;
 	height: 5px;
-	background: #EEE;
+	background: #eee;
 	margin: 2em auto;
 	border: 0;
 }
@@ -182,7 +182,7 @@ body#tinymce.wp-editor .alignnone img {
 	display: block;
 	box-sizing: border-box;
 	padding: 5px;
-	border: 1px solid #EEE;
+	border: 1px solid #eee;
 }
 
 
@@ -246,7 +246,7 @@ body#tinymce.wp-editor td {
 	margin: 0;
 	overflow: visible;
 	line-height: 120%;
-	border-bottom: 1px solid #DDD;
+	border-bottom: 1px solid #ddd;
 }
 
 body#tinymce.wp-editor caption {
@@ -284,7 +284,7 @@ body#tinymce.wp-editor fieldset legend {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	padding: 10px 12px;
-	background: #FF706C;
+	background: #ff706c;
 	color: #fff;
 }
 
@@ -360,7 +360,7 @@ body#tinymce.wp-editor input[type="submit"]:hover,
 body#tinymce.wp-editor input[type="reset"]:hover,
 body#tinymce.wp-editor input[type="button"]:hover {
 	cursor: pointer;
-	background: #FF706C;
+	background: #ff706c;
 	color: #fff;
 }
 

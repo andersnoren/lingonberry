@@ -53,6 +53,46 @@ Source: http://www.unsplash.com
 
 == Changelog ==
 
+Version 2.0.0 (2021-05-XX)
+-------------------------
+- Removed the languages folder, since translations are handled by GlotPress on WordPress.org.
+- Removed license.txt.
+- Removed the Dribble and Flickr widgets, since the APIs they are using are being removed.
+- Moved all assets to the /assets/ folder.
+- Renamed the editor styles CSS files and moved them to /assets/css/.
+- Removed the lingonberry_nav_walker, since it's no longer needed.
+- Removed unused custom body class for has-featured-image.
+- Removed no longer needed lingonberry_admin_style() function styling admin CSS.
+- Added class_exists() check to the Lingonberry Customizer class.
+- Made post thumbnails available globally, and not just for specific post types.
+- Removed the `post-image` image size, and set the post thumbnail size to those dimensions instead.
+- Added Flexslider JS as a dependency to the theme JS, instead of enqueueing it separately.
+- Added theme version to all enqueues.
+- Moved the Customizer class to inc/classes/class-lingonberry-customize.php.
+- Removed unused Customizer setting for lingonberry_logo.
+- Removed unused Customizer section (lingonberry_options).
+- Removed Customizer preview updates via postMessage.
+- Customizer: Only output the accent color styles if there is an accent color set, and it differs from the default.
+- Restructured the Customizer custom CSS output, and made the accent color elements filterable by hooking into lingonberry_accent_color_elements.
+- Updated CSS reset.
+- Cleaned up functions.php.
+- Unified single.php, page.php and image.php into singular.php (removing some image.php functionality).
+- Unified all content-[XXX].php files into content.php.
+- Unified index.php, archive.php and search.php into index.php.
+- Updated template-archives.php and template-contact.php to use singular.php, with custom output added by conditionals.
+- Fixed missing image and gallery post format icon.
+- Removed searchform.php, opted into HTML5 markup for search forms, and updated styled accordingly.
+- Removed all 1x icons, and replaced them with the existing 2x icons.
+- Made the dropdown menus accessible with keyboard navigation.
+- Changed the navigation toggle to a button element, making it keyboard accessible, and moved focus to the menu when it's clicked.
+- Restructured the archive header to be more SEO friendly and more flexible.
+- Removed default striped table style, since it's available as an option for table blocks and conflicts with those styles.
+- Removed the border around post content images due to conflicts with block styles.
+- Removed the "Comments are closed" message on singular.
+- Moved the Post Content styles to the new Element Base CSS section, made them apply globally and modified other styles accordingly.
+- Added a skip link.
+- Updated the theme description to remove mentions of the custom widgets.
+
 Version 1.47 (2019-04-07)
 -------------------------
 - Added the new wp_body_open() function, along with a function_exists check

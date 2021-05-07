@@ -26,6 +26,19 @@ jQuery(document).ready(function($) {
         $("html, body").animate({ scrollTop: 0 }, 500);
         return false;
     });
+
+
+	// Move focus to blog menu when the navigation toggle is clicked
+	$( '.nav-toggle' ).on( 'click', function() {
+		$( '.blog-menu a' ).first().focus();
+	} );
+
+
+	// Show dropdown on focus
+	$( '.blog-menu a' ).on( 'blur focus', function( e ) {
+		$( this ).parents( 'li.menu-item-has-children' ).toggleClass( 'focus' );
+		if ( e.type == 'focus' ) $( this ).trigger( 'focus-applied' );
+	} );
 	
 	
 	// resize videos after container
