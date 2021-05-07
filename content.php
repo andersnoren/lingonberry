@@ -2,15 +2,19 @@
 
 	<?php $post_format = get_post_format() ? get_post_format() : 'default'; ?>
 
-	<div class="post-bubbles">
+	<?php if ( get_post_type() == 'post' && ! is_single() ) : ?>
 
-		<a href="<?php the_permalink(); ?>" class="format-bubble" title="<?php the_title_attribute(); ?>"></a>
-			
-		<?php if ( is_sticky() ) : ?>
-			<a href="<?php the_permalink(); ?>" title="<?php _e( 'Sticky post', 'lingonberry' ); ?>: <?php the_title_attribute(); ?>" class="sticky-bubble"><?php _e( 'Sticky post', 'lingonberry' ); ?></a>
-		<?php endif; ?>
+		<div class="post-bubbles">
 
-	</div><!-- .post-bubbles -->
+			<a href="<?php the_permalink(); ?>" class="format-bubble"></a>
+				
+			<?php if ( is_sticky() ) : ?>
+				<a href="<?php the_permalink(); ?>" class="sticky-bubble"><?php _e( 'Sticky post', 'lingonberry' ); ?></a>
+			<?php endif; ?>
+
+		</div><!-- .post-bubbles -->
+
+	<?php endif; ?>
 
 	<div class="content-inner">
 
@@ -66,7 +70,7 @@
 			elseif ( get_the_title() ) : 
 				?>
 			
-				<h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 				<?php 
 			endif;

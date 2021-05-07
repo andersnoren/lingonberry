@@ -92,6 +92,11 @@ Version 2.0.0 (2021-05-XX)
 - Moved the Post Content styles to the new Element Base CSS section, made them apply globally and modified other styles accordingly.
 - Added a skip link.
 - Updated the theme description to remove mentions of the custom widgets.
+- Added "Tested up to" and "Requires PHP" to style.css.
+- Removed all title attributes.
+- Restructured the container elements on archive pages and singular to be a little bit more straightforward.
+- Updated the footer widgets to fill available space, so if only two sidebars are set, each sidebar takes up 50% of the footer.
+- Changed to more semantic header and footer elements.
 
 Version 1.47 (2019-04-07)
 -------------------------

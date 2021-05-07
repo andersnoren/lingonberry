@@ -272,8 +272,6 @@ if ( ! function_exists( 'lingonberry_filter_archive_description' ) ) :
 			if ( $wp_query->found_posts ) {
 				/* Translators: %s = Number of results */
 				$description = sprintf( _nx( 'We found %s result for your search.', 'We found %s results for your search.',  $wp_query->found_posts, '%s = Number of results', 'lingonberry' ), $wp_query->found_posts );
-			} else {
-				$description = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'lingonberry' );
 			}
 		}
 
@@ -373,7 +371,7 @@ if ( ! function_exists( 'lingonberry_meta' ) ) :
 		
 		<div class="post-meta">
 		
-			<span class="post-date"><a href="<?php the_permalink(); ?>" title="<?php the_time( get_option( 'time_format' ) ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
+			<span class="post-date"><a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 			
 			<span class="date-sep"> / </span>
 				
@@ -533,7 +531,7 @@ if ( ! function_exists( 'lingonberry_add_gutenberg_features' ) ) :
 			array(
 				'name' 	=> _x( 'Lightest gray', 'Name of the lightest gray color in the Gutenberg palette', 'lingonberry' ),
 				'slug' 	=> 'lightest-gray',
-				'color' => '#F1F1F1',
+				'color' => '#f1f1f1',
 			),
 			array(
 				'name' 	=> _x( 'White', 'Name of the white color in the Gutenberg palette', 'lingonberry' ),

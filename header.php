@@ -54,7 +54,7 @@
 		 
 		</div><!-- .navigation -->
 	
-		<div class="header section">
+		<header class="header section" id="site-header">
 				
 			<div class="header-inner section-inner group">
 
@@ -66,20 +66,20 @@
 			
 				<?php if ( get_header_image() != '' ) : ?>
 							
-					<a href="<?php echo esc_url( home_url() ); ?>/" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> | <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home" class="logo">
+					<a href="<?php echo esc_url( home_url() ); ?>/" rel="home" class="logo">
 						<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 					</a>
 					
 				<?php else : ?>
 				
-					<a href="<?php echo esc_url( home_url() ); ?>/" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home" class="logo noimg"></a>
+					<a href="<?php echo esc_url( home_url() ); ?>/" rel="home" class="logo noimg"></a>
 				
 				<?php endif; ?>
 			        				
 				<h1 class="blog-title">
-					<a href="<?php echo esc_url( home_url() ); ?>/" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a>
+					<a href="<?php echo esc_url( home_url() ); ?>/" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a>
 				</h1>
 																							
 			</div><!-- .header section -->
 			
-		</div><!-- .header-inner section-inner -->
+		</header><!-- .header-inner section-inner -->
