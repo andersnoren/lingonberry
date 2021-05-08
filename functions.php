@@ -290,6 +290,11 @@ endif;
 
 if ( ! function_exists( 'lingoberry_filter_body_class' ) ) :
 	function lingoberry_filter_body_class( $classes ) {
+
+		// Slim page template class names (class = name - file suffix).
+		if ( is_page_template() ) {
+			$classes[] = basename( get_page_template_slug(), '.php' );
+		}
 		
 		// Add a shared class for styling archive pages.
 		if ( is_search() || is_archive() || is_home() ) {
@@ -300,6 +305,28 @@ if ( ! function_exists( 'lingoberry_filter_body_class' ) ) :
 
 	}
 	add_filter( 'body_class', 'lingoberry_filter_body_class' );
+endif;
+
+
+
+/* ---------------------------------------------------------------------------------------------
+   FILTER THE_CONTENT
+   --------------------------------------------------------------------------------------------- */
+
+if ( ! function_exists( 'lingonberry_the_content' ) ) :
+	function lingonberry_the_content( $content ) {
+
+		// On the archives template, append the content for that template.
+		if ( is_page_template( 'template-archives.php' ) ) {
+			ob_start();
+			include( locate_template( 'inc/archives-template-content.php' ) );
+			$content .= ob_get_clean();
+		}
+		
+		return $content;
+
+	}	
+	add_filter( 'the_content', 'lingonberry_the_content' );
 endif;
 
 
@@ -457,7 +484,7 @@ if ( ! function_exists( 'lingonberry_comment' ) ) :
 
 				<div class="comment-content post-content">
 				
-					<?php if ( '0' == $comment->comment_approved ) : ?>
+					<?php if ( ! $comment->comment_approved ) : ?>
 					
 						<p class="comment-awaiting-moderation"><?php __( 'Your comment is awaiting moderation.', 'lingonberry' ); ?></p>
 						

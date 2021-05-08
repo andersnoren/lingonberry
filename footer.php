@@ -1,12 +1,11 @@
-<?php if ( is_active_sidebar( 'footer-a' ) || is_active_sidebar( 'footer-b' ) || is_active_sidebar( 'footer-c' ) ) : ?>
+<?php 
+
+$sidebar_count = count( array_filter( array( is_active_sidebar( 'footer-a' ), is_active_sidebar( 'footer-b' ), is_active_sidebar( 'footer-c' ) ) ) );
+
+if ( $sidebar_count ) : 
+	?>
 
 	<footer class="footer section" id="site-footer">
-
-		<?php
-
-		$sidebar_count = count( array_filter( array( is_active_sidebar( 'footer-a' ), is_active_sidebar( 'footer-b' ), is_active_sidebar( 'footer-c' ) ) ) ) ;
-
-		?>
 		
 		<div class="footer-inner section-inner group sidebar-count-<?php echo $sidebar_count; ?>">
 
@@ -31,14 +30,16 @@
 	
 	</footer><!-- #site-footer -->
 
-<?php endif; ?>
+	<?php 
+endif;
+?>
 
 <div class="credits section">
 
 	<div class="credits-inner section-inner">
 
 		<p class="credits-left">
-			<span><?php _e( 'Copyright', 'lingonberry' ); ?></span> &copy; <?php echo date( 'Y' ) ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+			<span><?php _e( 'Copyright', 'lingonberry' ); ?></span> &copy; <?php echo date( 'Y' ) ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
 		</p>
 		
 		<p class="credits-right">

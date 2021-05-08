@@ -7,7 +7,7 @@
 		<?php
 	
 		$archive_title 			= get_the_archive_title();
-		$archive_description 	= get_the_archive_description( '', '' );
+		$archive_description 	= get_the_archive_description();
 
 		if ( $archive_title || $archive_description ) : ?>
 

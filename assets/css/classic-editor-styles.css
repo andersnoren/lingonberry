@@ -1,9 +1,6 @@
 /*---------------------------------------------------------------------------------
-
-	Editor styles for Fukasawa
-
+	Classic Editor styles for Lingonberry
 ---------------------------------------------------------------------------------*/
-
 
 body#tinymce.wp-editor { 
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
@@ -46,9 +43,7 @@ body#tinymce.wp-editor hr {
 	border: 0;
 }
 
-
-/* Headlines --------------------------------------- */
-
+/* Headings ---------------------------------- */
 
 body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor h6 {
 	margin: 50px 0 20px;
@@ -77,9 +72,7 @@ body#tinymce.wp-editor h6+h1, body#tinymce.wp-editor h6+h2, body#tinymce.wp-edit
 	margin-top: 30px;
 }
 
-
-/* Blockquote --------------------------------------- */
-
+/* Quotes ------------------------------------ */
 
 body#tinymce.wp-editor blockquote {
 	font-size: 1.1em;
@@ -119,9 +112,7 @@ body#tinymce.wp-editor blockquote cite {
 
 body#tinymce.wp-editor blockquote cite em { font-style: italic; font-weight: bold; }
 
-
-/* Lists --------------------------------------- */
-
+/* Lists ------------------------------------- */
 
 body#tinymce.wp-editor ul {
 	list-style: disc;
@@ -165,9 +156,7 @@ body#tinymce.wp-editor ul > li:first-child {
 	margin-top: 0.5em;
 }
 
-
-/* Post media --------------------------------------- */
-
+/* Post Media -------------------------------- */
 
 body#tinymce.wp-editor .wp-caption { margin-bottom: 1.5em; }
 
@@ -228,9 +217,7 @@ body#tinymce.wp-editor .gallery-caption {
 	line-height: 24px;
 }
 
-
-/* Tables --------------------------------------- */
-
+/* Tables ------------------------------------ */
 
 body#tinymce.wp-editor table {
 	border-collapse: collapse;
@@ -265,11 +252,7 @@ body#tinymce.wp-editor th {
 	color: #444;
 }
 
-body#tinymce.wp-editor table tbody > tr:nth-child(odd) > td { background: #f9f9f9; }
-
-
-/* Forms --------------------------------------- */
-
+/* Forms ------------------------------------- */
 
 body#tinymce.wp-editor fieldset {
 	padding: 25px;

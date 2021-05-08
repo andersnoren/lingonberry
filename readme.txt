@@ -2,7 +2,8 @@
 Contributors: Anlino
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=anders%40andersnoren%2ese&lc=US&item_name=Free%20WordPress%20Themes%20from%20Anders%20Noren&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Requires at least: 4.4
-Tested up to: 5.0
+Requires PHP: 5.4
+Tested up to: 5.7.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,10 +31,6 @@ FontAwesome
 License: SIL Open Font License, 1.1 
 Source: https://fontawesome.io
 
-DoubleTapToGo.js
-License: MIT License
-Source: https://github.com/dachcom-digital/jquery-doubletaptogo
-
 Fitvids.js
 License: WTFPL
 Source: http://fitvidsjs.com
@@ -53,7 +50,7 @@ Source: http://www.unsplash.com
 
 == Changelog ==
 
-Version 2.0.0 (2021-05-XX)
+Version 2.0.0 (2021-05-08)
 -------------------------
 - Removed the languages folder, since translations are handled by GlotPress on WordPress.org.
 - Removed license.txt.
@@ -83,6 +80,7 @@ Version 2.0.0 (2021-05-XX)
 - Fixed missing image and gallery post format icon.
 - Removed searchform.php, opted into HTML5 markup for search forms, and updated styled accordingly.
 - Removed all 1x icons, and replaced them with the existing 2x icons.
+- Compressed all of the icon files, saving 26 Kb.
 - Made the dropdown menus accessible with keyboard navigation.
 - Changed the navigation toggle to a button element, making it keyboard accessible, and moved focus to the menu when it's clicked.
 - Restructured the archive header to be more SEO friendly and more flexible.
@@ -97,6 +95,31 @@ Version 2.0.0 (2021-05-XX)
 - Restructured the container elements on archive pages and singular to be a little bit more straightforward.
 - Updated the footer widgets to fill available space, so if only two sidebars are set, each sidebar takes up 50% of the footer.
 - Changed to more semantic header and footer elements.
+- Cleaned up the gallery slideshow CSS.
+- Cleaned up the post format specific styles.
+- Added base block margins.
+- Set all uppercase text to use lining numerals.
+- Removed the Contact template since – let's be honest here – it's pretty useless.
+- Updated template-archives.php to use singular.php for output, with the archive template specific output appended to the_content with lingonberry_the_content().
+- Simplified the archive template styles.
+- Cleaned up the archive template output, and added conditionals before outputting.
+- Updated the pagination with conditionals using core functions instead of direct $wp_query checks.
+- Updated the header to use flex instead of absolute positioning, to make it more adaptable to long titles and weird line breaks.
+- Updated the blog title to only use the h1 element on the front page, to prevent issues with duplicate H1s.
+- Simplified mobile menu styles by wrapping some of the desktop menu styles in a media query.
+- Added an underline style to the current menu item.
+- Added a non-minified version of the Flexslider JavaScript.
+- Replaced custom single post navigation with the_post_navigation().
+- Replaced custom archive posts navigation with the_posts_navigation().
+- Increased text color contrast.
+- Converted screenshot to JPG, reducing file size.
+- Updated list of accent color targets with some missing elements.
+- Block editor styles improvements (correct font sizes and family, block width, heading styles).
+- Added missing esc_url() in footer.php, and removed unnecessary esc_attr() in header.php.
+- Removed mention of DoubleTapToGo.js in license section of readme, since it's no longer used.
+- Cleaned up formatting in the classic editor styles.
+- Updated the Table of Contents in style.css.
+- Overall cleanup of formatting and structure in style.css (not enough, never enough).	
 
 Version 1.47 (2019-04-07)
 -------------------------

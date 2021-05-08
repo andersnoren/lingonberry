@@ -19,12 +19,17 @@ if ( have_comments() ) : ?>
 		</h2>
 
 		<ol class="commentlist">
-			<?php wp_list_comments( array( 'type' => 'comment', 'callback' => 'lingonberry_comment' ) ); ?>
+			<?php 
+			wp_list_comments( array( 
+				'callback' 	=> 'lingonberry_comment',
+				'type' 		=> 'comment', 
+			) );
+			?>
 		</ol>
 		
 		<?php 
-		
-		if ( ! empty( $comments_by_type['pings'] ) ) : 
+		$pingback_count = isset( $wp_query->comments_by_type['pings'] ) ? count( $wp_query->comments_by_type['pings'] ) : 0;
+		if ( $pingback_count ) : 
 			?>
 		
 			<div class="pingbacks">
@@ -34,7 +39,6 @@ if ( have_comments() ) : ?>
 					<h3 class="pingbacks-title">
 
 						<?php 
-						$pingback_count = count( $wp_query->comments_by_type['pings'] );
 						echo $pingback_count . ' ' . _n( 'Pingback', 'Pingbacks', $pingback_count, 'lingonberry' ); ?>
 					
 					</h3>
@@ -42,8 +46,8 @@ if ( have_comments() ) : ?>
 					<ol class="pingbacklist">
 						<?php 
 						wp_list_comments( array( 
+							'callback' 	=> 'lingonberry_comment',
 							'type' 		=> 'pings', 
-							'callback' 	=> 'lingonberry_comment'
 						) );
 						?>
 					</ol>
@@ -61,10 +65,7 @@ if ( have_comments() ) : ?>
 		if ( $previous_comments_link || $next_comments_link ) : ?>
 		
 			<div class="comment-nav-below post-nav" role="navigation">
-				<?php 
-				echo $previous_comments_link;
-				echo $next_comments_link;
-				?>
+				<?php echo $previous_comments_link . $next_comments_link; ?>
 			</div><!-- .comment-nav-below -->
 			
 		<?php endif; ?>

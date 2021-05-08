@@ -1,8 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php $post_format = get_post_format() ? get_post_format() : 'default'; ?>
+	<?php 
+	$post_format 	= get_post_format() ? get_post_format() : 'default'; 
+	$post_type 		= get_post_type();
+	?>
 
-	<?php if ( get_post_type() == 'post' && ! is_single() ) : ?>
+	<?php if ( $post_type == 'post' && ! is_single() ) : ?>
 
 		<div class="post-bubbles">
 
@@ -63,7 +66,7 @@
 				<?php 
 			endif;
 			
-			if ( is_single() ) :
+			if ( is_singular() ) :
 
 				the_title( '<h1 class="post-title">', '</h1>' );
 
@@ -75,7 +78,9 @@
 				<?php 
 			endif;
 
-			lingonberry_meta();
+			if ( $post_type == 'post' ) {
+				lingonberry_meta();
+			}
 
 			?>
 			

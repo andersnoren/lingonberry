@@ -15,20 +15,13 @@
 				
 				get_template_part( 'content', get_post_format() ); 
 
-				$next_post = get_next_post_link( '%link' );
-				$prev_post = get_previous_post_link( '%link' );
+				if ( is_single() ) {
+					the_post_navigation( array(
+						'class' 	=> 'post-nav',
+					) );
+				}
 				
-				if ( $next_post || $prev_post ) : 
-					?>
-							
-					<div class="post-nav">
-						<?php echo $next_post . $prev_post; ?>
-					</div><!-- .post-nav -->
-
-					<?php
-				endif;
-				
-				comments_template( '', true ); 
+				comments_template( '', true );
 
 				?>
 

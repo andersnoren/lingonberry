@@ -27,28 +27,24 @@
 		
 				<ul class="blog-menu">
 				
-					<?php if ( has_nav_menu( 'primary' ) ) {
-																		
+					<?php 
+					if ( has_nav_menu( 'primary' ) ) {
 						wp_nav_menu( array( 
 							'container'			=> '', 
 							'items_wrap' 		=> '%3$s',
 							'theme_location' 	=> 'primary', 
 						) ); 
-					
 					} else {
-					
 						wp_list_pages( array(
 							'container' => '',
 							'title_li' 	=> '',
 						) );
-						
-					} ?>
+					}
+					?>
 					
 				 </ul>
 				 
 				 <?php get_search_form(); ?>
-				 
-				 <div class="clear"></div>
 			 
 			</div><!-- .navigation-inner -->
 		 
@@ -63,22 +59,28 @@
 					<div class="bar"></div>
 					<div class="bar"></div>
 				</button>
+
+				<div class="blog-title-wrapper">
 			
-				<?php if ( get_header_image() != '' ) : ?>
-							
-					<a href="<?php echo esc_url( home_url() ); ?>/" rel="home" class="logo">
-						<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-					</a>
+					<?php if ( get_header_image() != '' ) : ?>
+								
+						<a href="<?php echo esc_url( home_url() ); ?>/" rel="home" class="logo">
+							<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+						</a>
+						
+					<?php else : ?>
 					
-				<?php else : ?>
-				
-					<a href="<?php echo esc_url( home_url() ); ?>/" rel="home" class="logo noimg"></a>
-				
-				<?php endif; ?>
-			        				
-				<h1 class="blog-title">
-					<a href="<?php echo esc_url( home_url() ); ?>/" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a>
-				</h1>
+						<a href="<?php echo esc_url( home_url() ); ?>/" rel="home" class="logo noimg"></a>
+					
+					<?php endif; ?>
+
+					<?php if ( is_front_page() && is_home() && ! is_paged() ) : ?>
+						<h1 class="blog-title"><a href="<?php echo esc_url( home_url() ); ?>/" rel="home"><?php echo get_bloginfo( 'title' ); ?></a></h1>
+					<?php else : ?>
+						<div class="blog-title"><a href="<?php echo esc_url( home_url() ); ?>/" rel="home"><?php echo get_bloginfo( 'title' ); ?></a></div>
+					<?php endif; ?>
+
+				</div><!-- .blog-title-wrapper -->
 																							
 			</div><!-- .header section -->
 			

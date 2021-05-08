@@ -36,8 +36,8 @@ if ( ! class_exists( 'lingonberry_customize' ) ) :
 
 			// An array storing all of the elements with custom accent color, sorted by the CSS property to modify.
 			$properties = apply_filters( 'lingonberry_accent_color_elements', array(
-				'background-color' 		=> array( '.header', '.post-bubbles a:hover', '.post-nav a:hover', '.widget_tag_cloud a:hover', '.post-content fieldset legend', ':root .has-accent-background-color', '.comment-actions a:hover' ),
-				'color' 				=> array( 'a', '.comment-meta-content cite a:hover', '.comment-meta-content p a:hover', '.widget-content .textwidget a:hover', '.widget_archive li a:hover', '.widget_categories li a:hover', '.widget_meta li a:hover', '.widget_nav_menu li a:hover', '#wp-calendar thead', '.search-button:hover .genericon', '.flexslider:hover .flex-next:active', '.flexslider:hover .flex-prev:active', '.post-title a:hover', '.widget_rss .widget-content ul a.rsswidget:hover', ':root .has-accent-color', '.comment-header h4 a:hover' ),
+				'background-color' 		=> array( '.header', '.post-bubbles a:hover', '.post-nav a:hover', '.archive-nav a:hover', '.widget_tag_cloud a:hover', 'fieldset legend', ':root .has-accent-background-color', '.comment-actions a:hover', 'a#cancel-comment-reply-link:hover', 'button:hover', '.button:hover', '.wp-block-button__link:hover', '.wp-block-file__button:hover', 'input[type="button"]:hover', 'input[type="reset"]:hover', 'input[type="submit"]:hover' ),
+				'color' 				=> array( 'a', '.comment-meta-content cite a:hover', '.comment-meta-content p a:hover', '.flexslider:hover .flex-next:active', '.flexslider:hover .flex-prev:active', ':root .has-accent-color' ),
 			) );
 
 			$css = '<!-- Customizer CSS --><style type="text/css">';
