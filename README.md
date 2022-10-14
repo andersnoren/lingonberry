@@ -2,7 +2,7 @@
 
 A clean, simple and responsive theme for bloggers. Features responsive design, retina ready assets, custom styling for all post formats, custom page templates, Block Editor support, custom accent color, and editor styles.
 
-![Lingonberry](https://github.com/andersnoren/lingonberry/blob/main/screenshot.png)
+![Lingonberry](https://github.com/andersnoren/lingonberry/blob/master/screenshot.jpg)
 
 You can download the latest stable release of Lingonberry [from WordPress.org](https://wordpress.org/themes/lingonberry/).
 
