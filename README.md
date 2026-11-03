@@ -20,9 +20,9 @@ Do you want to support the continued development of Lingonberry? You can send me
 
 ## Requirements
 - WordPress 4.4+
-- PHP 5.4+
+- PHP 5.6+
 - License: [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html) or later
 
 ## Resources
 - [About Lingonberry](https://andersnoren.se/teman/lingonberry-wordpress-theme/)
-- [Lingonberry demo site](https://andersnoren.se/themes/lingonberry/)
+- [Lingonberry demo site](https://lingonberry.andersnoren.se)
